@@ -16,6 +16,6 @@ jobs:
       - uses: JS-DevTools/npm-publish@v2
         with:
           registry: https://registry.npmjs.org/
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          token: ${{ secrets.NPM_TOKEN }}
           access: public
           strategy: upgrade

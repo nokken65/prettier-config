@@ -1,4 +1,4 @@
-import prettierConfig from './prettier.json'
+import prettierConfig from './prettier.json' assert { type: 'json' }
 
 /** @type {import('prettier').Options} */
 export default (config = {}) => {

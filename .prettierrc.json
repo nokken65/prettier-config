@@ -23,16 +23,29 @@
   "plugins": ["@ianvs/prettier-plugin-sort-imports"],
   "importOrder": [
     "<BUILTIN_MODULES>",
-    "^(react|next(.*))$",
+    "^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
     "<THIRD_PARTY_MODULES>",
-    "<TYPES>",
     "",
     "^@/(.*)$",
     "^~/(.*)$",
     "",
     "^[./]",
+    "",
+    "<TYPES>",
     "<TYPES>^[.]",
+    "",
     "^(.*)(sass|css|scss)$"
   ],
-  "importOrderParserPlugins": ["classProperties", "decorators-legacy", "jsx", "typescript"]
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderBuiltinModulesToTop": true,
+  "importOrderParserPlugins": [
+    "typescript",
+    "jsx",
+    "decorators-legacy",
+    "classProperties"
+  ],
+  "importOrderMergeDuplicateImports": true,
+  "importOrderCombineTypeAndValueImports": true
 }

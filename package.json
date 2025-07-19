@@ -1,18 +1,18 @@
 {
   "name": "@nokken65/prettier-config",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "type": "module",
   "description": "prettier config",
-  "main": "./.prettierrc.json",
-  "prettier": "./.prettierrc.json",
+  "main": "index.js",
+  "prettier": "./prettier.json",
   "files": [
     ".prettierignore",
-    ".prettierrc.js",
-    ".prettierrc.json"
+    "prettier.json"
   ],
   "scripts": {
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'"
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'",
+    "postinstall": "node scripts/postinstall.js"
   },
   "repository": {
     "type": "git",
@@ -28,13 +28,11 @@
   "homepage": "https://github.com/nokken65/prettier-config#readme",
   "keywords": [
     "prettier",
-    "config"
+    "config",
+    "formatter",
+    "code-style"
   ],
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "4.5.1",
-    "prettier": "3.6.2"
-  },
-  "peerDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.5.1",
     "prettier": "3.6.2"
   }

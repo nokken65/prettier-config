@@ -1,6 +1,6 @@
 {
   "name": "@nokken65/prettier-config",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "prettier config",
   "main": "prettier.config.js",

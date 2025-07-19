@@ -2,5 +2,8 @@
 const baseConfig = require('./.prettierrc.json')
 
 module.exports = {
-  ...baseConfig
+  ...baseConfig,
+  plugins: [
+    require.resolve('@ianvs/prettier-plugin-sort-imports'),
+  ],
 }

@@ -11,7 +11,13 @@ jobs:
     environment: npm
     steps:
       - uses: actions/checkout@v5
+
       - uses: JS-DevTools/npm-publish@v4
         with:
           registry: https://registry.npmjs.org/
           token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true

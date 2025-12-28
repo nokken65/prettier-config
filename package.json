@@ -2,14 +2,14 @@
   "name": "@nokken65/prettier-config",
   "version": "1.2.2",
   "private": false,
-  "description": "prettier config",
   "type": "module",
-  "prettier": "./.prettierrc.json",
-  "exports": "./index.js",
-  "files": [
-    ".prettierignore",
-    ".prettierrc.json"
-  ],
+  "prettier": "./.prettierrc",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./.prettierrc": "./.prettierrc",
+    "./.prettierignore": "./.prettierignore"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -20,6 +20,7 @@
   "scripts": {
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'"
   },
+  "description": "prettier config",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nokken65/prettier-config.git"

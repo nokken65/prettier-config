@@ -1,4 +1,4 @@
-import configJson from './.prettierrc.json' with { type: 'json' }
+import configJson from './.prettierrc' with { type: 'json' }
 
 /**
  * @see https://prettier.io/docs/configuration

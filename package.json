@@ -1,6 +1,6 @@
 {
   "name": "@nokken65/prettier-config",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "private": false,
   "type": "module",
   "prettier": "./.prettierrc.json",
@@ -14,10 +14,8 @@
     "access": "public"
   },
   "dependencies": {
+    "prettier": "3.7.4",
     "@ianvs/prettier-plugin-sort-imports": "4.7.0"
-  },
-  "peerDependencies": {
-    "prettier": "3.7.4"
   },
   "scripts": {
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'"

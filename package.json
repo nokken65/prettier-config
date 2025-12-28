@@ -1,6 +1,6 @@
 {
   "name": "@nokken65/prettier-config",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "private": false,
   "type": "module",
   "prettier": "./.prettierrc.json",

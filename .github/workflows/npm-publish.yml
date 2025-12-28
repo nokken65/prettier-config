@@ -12,9 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     environment: npm
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v5
 
-      - uses: JS-DevTools/npm-publish@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Publish package
+        uses: JS-DevTools/npm-publish@v4
         with:
           registry: https://registry.npmjs.org/
           token: ${{ secrets.NPM_TOKEN }}

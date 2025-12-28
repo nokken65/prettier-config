@@ -1,4 +1,4 @@
-import baseConfig from './.prettierrc.json' with { type: 'json' }
+const baseConfig = require('./.prettierrc.json')
 
 /** @type {import("prettier").Config} */
 export default {

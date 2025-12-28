@@ -1,7 +1,9 @@
+import configJson from './.prettierrc.json' with { type: 'json' }
+
 /**
  * @see https://prettier.io/docs/configuration
  * @type {import("prettier").Config}
  */
-const config = require('./.prettierrc.json')
+const config = { ...configJson }
 
 export default config

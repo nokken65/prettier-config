@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    tags:
+      - 'v*'
 
 jobs:
   publish-npm:
@@ -11,6 +13,15 @@ jobs:
     environment: npm
     steps:
       - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          cache: true
+
+      - name: Install dependencies
+        run: pnpm install
 
       - uses: JS-DevTools/npm-publish@v4
         with:

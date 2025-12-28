@@ -1,20 +1,22 @@
 {
   "name": "@nokken65/prettier-config",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "private": false,
   "type": "module",
-  "prettier": "./.prettierrc",
+  "prettier": "./.prettierrc.json",
   "main": "./index.js",
   "exports": {
     ".": "./index.js",
-    "./.prettierrc": "./.prettierrc",
+    "./.prettierrc.json": "./.prettierrc.json",
     "./.prettierignore": "./.prettierignore"
   },
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.7.0"
+  },
   "peerDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "4.7.0",
     "prettier": "3.7.4"
   },
   "scripts": {

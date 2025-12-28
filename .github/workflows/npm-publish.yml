@@ -8,10 +8,11 @@ on:
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
+    environment: npm
     steps:
       - uses: actions/checkout@v5
-
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: JS-DevTools/npm-publish@v4
+        with:
+          registry: https://registry.npmjs.org/
+          token: ${{ secrets.NPM_TOKEN }}
+          strategy: upgrade

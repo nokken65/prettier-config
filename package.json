@@ -4,13 +4,19 @@
   "private": false,
   "description": "prettier config",
   "type": "module",
-  "main": "./index.js",
   "prettier": "./.prettierrc.json",
+  "exports": "./index.js",
   "files": [
     ".prettierignore",
     ".prettierrc.json"
   ],
-  "exports": "./index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.7.0",
+    "prettier": "3.7.4"
+  },
   "scripts": {
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'"
   },
@@ -31,12 +37,5 @@
     "config",
     "formatter",
     "code-style"
-  ],
-  "peerDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "4.7.0",
-    "prettier": "3.7.4"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+  ]
 }

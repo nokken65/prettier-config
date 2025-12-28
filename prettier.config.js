@@ -1,7 +1,7 @@
 const baseConfig = require('./.prettierrc.json')
 
 /** @type {import("prettier").Config} */
-export default {
+module.exports = {
   ...baseConfig,
   plugins: [require.resolve('@ianvs/prettier-plugin-sort-imports')]
 }

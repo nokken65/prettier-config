@@ -20,7 +20,8 @@
       }
     }
   ],
-  "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+  "plugins": ["@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-multiline-arrays"],
   "importOrder": [
     "<BUILTIN_MODULES>",
     "^(react/(.*)$)|^(react$)",
